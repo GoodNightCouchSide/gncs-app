@@ -2,12 +2,18 @@
 
 ## Table of contents
 
-- [Installation](#installation)
-- [Development](#development)
-- [Code formatting and linting](#code-formatting-and-linting)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [License](#license)
+- [Good Night Couch Side](#good-night-couch-side)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Development](#development)
+    - [Branch prefixes](#branch-prefixes)
+    - [Project folder structure](#project-folder-structure)
+    - [Node Environments and gncs Service URLs](#node-environments-and-gncs-service-urls)
+    - [General dev guidelines](#general-dev-guidelines)
+  - [Code formatting and linting](#code-formatting-and-linting)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+  - [License](#license)
 
 ## Installation
 
@@ -32,7 +38,7 @@ and have fun on [http://localhost:3000](http://localhost:3000).
 
 ## Development
 
-How to name your supporting branch prefixes?
+### Branch prefixes
 
 - `feature/`
 - `bugfix/`
@@ -40,6 +46,54 @@ How to name your supporting branch prefixes?
 - `hotfix/`
 - `support/`  
   Version tag prefix? []
+
+### Project folder structure
+
+This [tutorial](https://blog.webdevsimplified.com/2022-07/react-folder-structure/) was used to
+create this folder structure.
+
+- `public` <br> _All static content goes in there_
+- `src`
+
+  - `assets`
+    - `images`
+    - `scss`
+  - `components` <br> _In this ui folder which contains all our UI components like buttons, modals,
+    cards, etc. We also have a form folder for form specific controls like checkboxes, inputs, date
+    pickers, etc._
+
+    _You can customize and breakdown this components folder however you see fit based on your
+    project needs, but ideally this folder shouldn't get too large as many of your more complex
+    components will be stored in the features folder._
+
+  - ~~`context`~~ <br> _This project does not need context because used as global state store redux_
+
+  - `features` <br> _This folder group all the features. Already this is easier to understand as a
+    developer since in 90% of cases when you are going to add new code to a project you are either
+    going to implement a new feature, such as adding user accounts, or you are going to modify an
+    existing feature, such as adding the ability to edit todos._
+
+  - `hooks` <br> _To storing every hook in your application it will only store the global hooks that
+    are used across multiple features._
+  - `layouts`<br> _This is just a special folder for placing any layout based components. This would
+    be things like a page layout,sidebar, navbar, container, etc._
+
+  - `lib` <br> _This folder contains facades for the various different libraries you use in your
+    project._
+
+    _Doing this makes is much easier to update, and replace libraries when all the library specific
+    code is in one place in your application. It also makes it easier to customize third party
+    libraries to your own need._
+
+  - `pages` _This folder now only contains one file per page and the reason for this is that all the
+    logic for the features on the pages are in the features folder. This means that the files in the
+    pages folder are actually quite simple, just glue together a few feature components and some
+    general components._
+
+  - `utils` <br> _This folder is for storing all utility functions such as formatters. This is a
+    pretty straightforward folder and all the files in this folder should likewise be
+    straightforward. I generally like to only store pure functions in this folder since if a utility
+    function has side effects then it is most likely not just a simple utility function._
 
 ### Node Environments and gncs Service URLs
 
