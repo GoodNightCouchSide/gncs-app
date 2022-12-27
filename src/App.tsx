@@ -1,8 +1,8 @@
-import './assets/scss/App.css'
+import '@/assets/scss/App.css'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
-import EventListPage from './pages/EventListPage'
-import MainLayout from './layouts/MainLayout'
-import NotFoundPage from './pages/NotFoundPage'
+import EventListPage from '@/pages/EventListPage'
+import MainLayout from '@/layouts/MainLayout'
+import NotFoundPage from '@/pages/NotFoundPage'
 
 function App() {
   return (

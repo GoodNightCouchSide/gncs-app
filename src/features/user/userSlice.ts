@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from '../../lib/rdx/store'
+import { RootState } from '@/lib/rdx/store'
 
 interface UserState {
   name?: string
