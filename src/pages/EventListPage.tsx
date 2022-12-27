@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-export interface IEventListPageProps {}
+// export interface IEventListPageProps {}
 
-const EventListPage: React.FunctionComponent<IEventListPageProps> = (props) => {
+const EventListPage: React.FunctionComponent = () => {
   const [message, setMessage] = useState('')
   const { number } = useParams()
   useEffect(() => {
-    console.log('test run use effect')
-    if (number) {
+    if (number != null) {
       setMessage(`The number is ${number}`)
     } else {
       setMessage('No number was provided')
