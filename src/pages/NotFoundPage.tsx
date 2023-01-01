@@ -1,8 +1,8 @@
 import React from 'react'
 
-interface INotFoundProps {}
+// interface INotFoundProps {}
 
-const NotFoundPage: React.FunctionComponent<INotFoundProps> = (props) => {
+const NotFoundPage: React.FunctionComponent = () => {
   return <div>Page not found!</div>
 }
 
