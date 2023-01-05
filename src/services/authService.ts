@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
-import { UserLoginRequest, UserLoginResponse } from '@/types/AuthTypes'
+import { UserLoginRequest } from '@/types/AuthTypes'
 import { UserToken } from '@/types/UserTypes'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
