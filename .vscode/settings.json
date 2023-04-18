@@ -3,5 +3,6 @@
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/**"]
 }

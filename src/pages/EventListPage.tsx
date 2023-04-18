@@ -5,7 +5,7 @@ import { BasicEvent } from '@/types/EventTypes'
 // export interface IEventListPageProps {}
 
 const EventListPage: React.FunctionComponent = () => {
-  const { data, error, isLoading } = useGetEventsQuery()
+  const { data, error, isLoading } = useGetEventsQuery(undefined)
   if (isLoading) return <div>loding events...</div>
   if (error != null) return <div>error at loding events</div>
   return (
