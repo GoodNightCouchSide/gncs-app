@@ -12,13 +12,13 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
-import { Link } from '@mui/material'
+import { Link, styled } from '@mui/material'
 import UserMenu from './UserMenu'
 
 const pages = [
   {
     title: 'Shows',
-    path: '/eventList'
+    path: '/'
   },
   {
     title: 'Add Show',
@@ -29,6 +29,16 @@ const pages = [
     path: '/underground'
   }
 ]
+
+const HeaderLogo = styled(RouterLink)(({ theme }) => ({
+  color: 'black',
+  textDecoration: 'none',
+  marginRight: theme.spacing(2),
+  '&:hover': {
+    color: 'green'
+  },
+  '& h6': {}
+}))
 
 const ResponsiveAppBar: React.FunctionComponent = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
@@ -46,23 +56,23 @@ const ResponsiveAppBar: React.FunctionComponent = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none'
-            }}
-          >
-            LOGO
-          </Typography>
+          <HeaderLogo to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none'
+              }}
+            >
+              LOGO
+            </Typography>
+          </HeaderLogo>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

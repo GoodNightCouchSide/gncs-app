@@ -30,7 +30,8 @@ const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
     mode,
     ...(mode === 'light' ? lightStyles : darkStyles)
-  }
+  },
+  spacing: [0, 4, 8, 16, 20, 24]
 })
 
 export default { getDesignTokens }

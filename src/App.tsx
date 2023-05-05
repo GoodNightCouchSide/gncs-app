@@ -21,12 +21,12 @@ const App: React.FunctionComponent = () => {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<MainLayout />}>
-            <Route index element={<Navigate replace to="/eventList" />} />
+            {/* <Route index element={<Navigate replace to="/eventList" />} /> */}
+            <Route index element={<EventListPage />} />
             <Route path="addEvent" element={<AddEventPage />} />
             <Route path="underground" element={<UndergroundPage />} />
             <Route path="login" element={<LoginPage />} />
-            <Route path="eventList">
-              <Route index element={<EventListPage />} />
+            <Route path="event">
               <Route path=":number" element={<EventListPage />} />
             </Route>
             <Route path="*" element={<NotFoundPage />} />
